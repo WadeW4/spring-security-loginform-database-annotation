@@ -1,4 +1,4 @@
-package com.mkyong.config.core;
+package com.wade.springsecurity.config.core;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

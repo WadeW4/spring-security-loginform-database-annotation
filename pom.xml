@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mkyong</groupId>
-	<artifactId>spring-security-loginform-database-annotation</artifactId>
+	<groupId>com.wade</groupId>
+	<artifactId>spring-security</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>SpringSecurity LoginForm Database</name>
-	<url>http://www.mkyong.com/tutorials/spring-security-tutorials/</url>
+	<name>SpringSecurity Sample</name>
+	<url>https://github.com/WadeW4/spring-security-loginform-database-annotation/</url>
 
 	<licenses>
 		<license>
@@ -134,8 +134,6 @@
 					<wtpversion>2.0</wtpversion>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>

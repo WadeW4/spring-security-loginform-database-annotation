@@ -1,4 +1,4 @@
-package com.mkyong.config;
+package com.wade.springsecurity.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,10 +11,9 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.mkyong.web.*" })
+@ComponentScan({ "com.wade.springsecurity.web.*" })
 @Import({ SecurityConfig.class })
 public class AppConfig {
-
 	@Bean(name = "dataSource")
 	public DriverManagerDataSource dataSource() {
 	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
@@ -33,5 +32,4 @@ public class AppConfig {
 		viewResolver.setSuffix(".jsp");
 		return viewResolver;
 	}
-	
 }

@@ -1,4 +1,4 @@
-package com.mkyong.config;
+package com.wade.springsecurity.config;
 
 import javax.sql.DataSource;
 
@@ -18,7 +18,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-		
 		auth.jdbcAuthentication().dataSource(dataSource)
 			.usersByUsernameQuery("select username,password, enabled from users where username=?")
 			.authoritiesByUsernameQuery("select username, role from user_roles where username=?");
@@ -26,7 +25,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
 		http.authorizeRequests()
 			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 			.and()
@@ -38,6 +36,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.exceptionHandling().accessDeniedPage("/403")
 			.and()
 				.csrf();
-		
 	}
 }
